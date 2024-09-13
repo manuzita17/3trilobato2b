@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de mochilas com uma variedade de estilos e tamanhos. Encontre a mochila perfeita para você.">
+    <title>Loja de Mochilas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos -->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1><a href="#">Loja de Mochilas</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de introdução -->
+    <section id="home">
+        <div class="container">
+            <h2>Bem-vindo à nossa loja!</h2>
+            <p>Encontre a mochila perfeita para qualquer ocasião. Desde mochilas escolares até mochilas para viagens, temos tudo o que você precisa.</p>
+            <a href="#produtos" class="btn">Veja nossos produtos</a>
+        </div>
+    </section>
+
+    <!-- Seção de produtos -->
+    <section id="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="mochila1.jpg" alt="Mochila Estilo Casual">
+                    <h3>Mochila Casual</h3>
+                    <p>Descrição breve da mochila casual.</p>
+                    <p>Preço: R$100,00</p>
+                </div>
+                <div class="product-item">
+                    <img src="mochila2.jpg" alt="Mochila para Viagem">
+                    <h3>Mochila para Viagem</h3>
+                    <p>Descrição breve da mochila para viagem.</p>
+                    <p>Preço: R$250,00</p>
+                </div>
+                <!-- Adicione mais itens de produtos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa dedicada a oferecer as melhores mochilas para você. Com anos de experiência, garantimos qualidade e estilo em cada produto.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida? Entre em contato conosco!</p>
+            <form action="enviar-email.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Mochilas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
