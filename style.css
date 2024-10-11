@@ -1,188 +1,82 @@
-/* Reset básico para margens e preenchimentos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-/* Container para centralizar o conteúdo e definir largura */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Cabeçalho */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    border-bottom: 3px solid #555;
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-}
-
-header h1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Seção de introdução */
-#home {
-    background: #e2e2e2;
-    padding: 20px 0;
-    text-align: center;
-}
-
-#home h2 {
-    margin-bottom: 10px;
-}
-
-#home p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background: #555;
-}
-
-/* Seção de produtos */
-#produtos {
-    padding: 20px 0;
-    text-align: center;
-}
-
-.product-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
 }
-
-.product-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    width: 300px;
-    text-align: left;
-}
-
-.product-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.product-item h3 {
-    margin-top: 10px;
-}
-
-.product-item p {
-    margin: 10px 0;
-}
-
-/* Seção Sobre */
-#sobre {
-    background: #fff;
-    padding: 20px 0;
+.banner{
     text-align: center;
+    color: aliceblue;
+    animation: shine 4s infinite alternate;
+    position: relative;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(red, green, blue, alpha);
 }
-
-#sobre p {
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-/* Seção de Contato */
-#contato {
-    padding: 20px 0;
-    background: #f4f4f4;
-}
-
-#contato form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contato label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-#contato input,
-#contato textarea {
-    width: 100%;
-    padding: 10px;
+.banner h1{
+    font-size: 3em;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
-
-#contato button {
-    background: #333;
-    color: #fff;
+.banner p{
+    font-size: 1.5em;
+}
+.dropdown{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.menu-btn{
+padding: 10px 20px;
+background-color: black;
+border: none;
+border: 5px;
+color: aliceblue;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+.menu-btn:hover {
+background-color: blueviolet;
+}
+.menu-list{
+    display: none;
+    list-style: none;
     padding: 10px;
-    border: none;
+    background-color: aqua;
     border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
+    box-shadow: o 4px 8px rgba(red, green, blue, alpha);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
 }
-
-#contato button:hover {
-    background: #555;
+.menu-list.show{
+    display: block;
 }
-
-/* Rodapé */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 3px solid #555;
+.menu-list li{
+    margin-bottom: 10px;
 }
-
-footer p {
-    margin: 0;
+.menu-list li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }
-
+.menu-list li a:hover{
+color: aquamarine;
+}
+.dropdown:hover-list {
+    display: block;
+}
+@keyframes shine{
+0%{
+    background-image: linear-gradient(90deg, #000, #000);
+}
+100%{
+    background-image: linear-gradient(90deg, #000, #ff0000, #000ff0, #0ff000);
+    background-size:  200% 200%;
+    background-position: 100%;
+}
+}
